@@ -1,10 +1,37 @@
-public class Job {
+package main;
 
+abstract class Job {
+
+    private int jobIdx;
+    private int jobType;
     private int time;
     private Location start;
     private Location end;
     private int qty;
 
+    public Job(int jobIdx, int time, Location start, Location end, int qty) {
+        this.jobIdx = jobIdx;
+        this.time = time;
+        this.start = start;
+        this.end = end;
+        this.qty = qty;
+    }
+
+    public int getJobIdx() {
+        return jobIdx;
+    }
+
+    public void setJobIdx(int jobIdx) {
+        this.jobIdx = jobIdx;
+    }
+
+    public int getJobType() {
+        return jobType;
+    }
+
+    public void setJobType(int jobType) {
+        this.jobType = jobType;
+    }
 
     public int getTime() {
         return time;
